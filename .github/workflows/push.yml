@@ -1,0 +1,23 @@
+on: [push]
+
+jobs:
+  k6_transpile_bundle_test:
+    name: Transpile, bundle and run
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+        
+      - name: Install dependencies
+        run: |
+          yarn --frozen-lockfile
+          
+      - name: Transpile and bundle test script
+        run: |
+          yarn webpack
+          
+      - name: Run local k6 test
+        uses: k6io/action@v0.1
+        with:
+          filename: dist/test.js
