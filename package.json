@@ -1,0 +1,23 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/k6io/example-typescript.git",
+  "author": "Simon Aronsson <simme@k6.io>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-typescript": "^7.10.1",
+    "@types/k6": "^0.26.0",
+    "@types/webpack": "^4.41.17",
+    "babel-loader": "^8.1.0",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
+  }
+}
