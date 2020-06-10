@@ -1,5 +1,7 @@
 <div align="center">
   
+  ![banner](assets/ts-js-k6.png)
+
 # Using typescript with k6
 
 ![.github/workflows/push.yml](https://github.com/k6io/example-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=master)
