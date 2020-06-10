@@ -1,7 +1,7 @@
 import { sleep, check, group } from 'k6';
 import { AuthApi } from './api/auth.api';
 import { UserApi } from './api/user.api';
-import { getRandomUsername } from './helpers/random-username';
+import { generateUsername } from './helpers/username';
 
 export { options } from './options';
 
@@ -10,7 +10,7 @@ const users = new UserApi();
 
 export default () => {
   const credentials = {
-    username: getRandomUsername(),
+    username: generateUsername(),
     password: 'a-topsecret-password',
   };
 
