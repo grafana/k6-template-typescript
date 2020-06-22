@@ -2,11 +2,13 @@
   
   ![banner](assets/ts-js-k6.png)
 
-# Using typescript with k6
+# Template to use TypeScript with k6
 
 ![.github/workflows/push.yml](https://github.com/k6io/example-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=master)
 
 </div>
+
+This repository provides a scaffolding project to start using Typescript with k6.
 
 ## Rationale
 
@@ -18,19 +20,31 @@ While it, of course, still is possible to shoot yourself in the foot with typesc
 - Improve readability and maintainablity.
 - Allow you to drop a lot of the defensive code previously needed to make sure consumers are calling functions properly.
 
+
 ## Prerequisites
 
 - [k6](https://k6.io/docs/getting-started/installation)
 - [NodeJS](https://nodejs.org/en/download/)
 - [Yarn](https://yarnpkg.com/getting-started/install) (optional)
 
-## Usage
+## Installation
 
-To run this project, we first have to install the dependencies defined on [`package.json`](./package.json)
+**Creating a repository from the `example-typescript` template**
+
+We have configured this project as a GitHub template to simplify starting a new Typescript project. Navigate to the [example-typescript](https://github.com/k6io/example-typescript) page and click **Use this template**.
+
+  ![](assets/use-this-template-button.png)
+
+
+**Install dependencies**
+
+Move to the project root folder and install the dependencies defined on [`package.json`](./package.json)
 
 ```bash
 $ yarn install
 ```
+
+## Running the test
 
 To run a test written in typescript, we first have to transpile the typescript code into javascript and bundle the project
 
@@ -38,15 +52,14 @@ To run a test written in typescript, we first have to transpile the typescript c
 $ yarn webpack
 ```
 
+
 Once that is done, we can run our script the same way we usually do, for instance:
 
 ```bash
 $ k6 run dist/test1.js
 ```
 
-> Note: If we modify the test, we have to repeat the bundling step before running it.
-
-### Transpile and Bundle
+### Transpiling and Bundling
 
 By default, k6 can only run ES5.1 Javascript code. To use typescript, we have to set up a bundler that converts typescript to javascript code. 
 
