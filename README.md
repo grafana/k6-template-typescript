@@ -2,17 +2,13 @@
   
   ![banner](assets/ts-js-k6.png)
 
-# Using typescript with k6
+# Template to use TypeScript with k6
 
 ![.github/workflows/push.yml](https://github.com/k6io/example-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=master)
 
 </div>
 
-## Prerequisites
-
-- [k6](https://k6.io/docs/getting-started/installation)
-- [NodeJS](https://nodejs.org/en/download/)
-- [Yarn](https://yarnpkg.com/getting-started/install) (optional)
+This repository provides a scaffolding project to start using Typescript with k6.
 
 ## Rationale
 
@@ -24,33 +20,49 @@ While it, of course, still is possible to shoot yourself in the foot with typesc
 - Improve readability and maintainablity.
 - Allow you to drop a lot of the defensive code previously needed to make sure consumers are calling functions properly.
 
-## Project layout
 
-This example project is split into four parts:
+## Prerequisites
 
-- **the actual test script**, which contains none of the logic for interacting with the system under test.
-- **api endpoint objects**, serving the same purpose as page objects do in the [the page object model](<https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html#:~:text=Page%20Object%20Model%20(POM)%20is,duplication%20and%20improves%20test%20maintenance.>) commonly used for UI testing.
-- **models** defining the shape of the data used in the tests
-- **helpers**, assisting with common operations.
+- [k6](https://k6.io/docs/getting-started/installation)
+- [NodeJS](https://nodejs.org/en/download/)
+- [Yarn](https://yarnpkg.com/getting-started/install) (optional)
 
-## Usage
+## Installation
 
-To run a test written in typescript, we first have to transpile and bundle our project
+**Creating a repository from the `example-typescript` template**
+
+We have configured this project as a GitHub template to simplify starting a new Typescript project. Navigate to the [example-typescript](https://github.com/k6io/example-typescript) page and click **Use this template**.
+
+  ![](assets/use-this-template-button.png)
+
+
+**Install dependencies**
+
+Move to the project root folder and install the dependencies defined in [`package.json`](./package.json)
+
+```bash
+$ yarn install
+```
+
+## Running the test
+
+To run a test written in typescript, we first have to transpile the typescript code into javascript and bundle the project
 
 ```bash
 $ yarn webpack
 ```
 
+
 Once that is done, we can run our script the same way we usually do, for instance:
 
 ```bash
-$ k6 run dist/test.js \
-    --vus 10 \
-    --duration 10s
+$ k6 run dist/test1.js
 ```
 
-## Additional resources
+### Transpiling and Bundling
 
-- [Examples published in the k6 docs](https://k6.io/docs/examples)
-- [Example projects available on GitHub](https://github.com/search?q=topic%3Aexamples+org%3Ak6io&type=Repositories)
-- [A curated list of awesome k6 resources](https://github.com/k6io/awesome-k6/)
+By default, k6 can only run ES5.1 Javascript code. To use typescript, we have to set up a bundler that converts typescript to javascript code. 
+
+This project uses `Babel` and `Webpack` to bundle the different files - using the configuration of the [`webpack.config.js`](./webpack.config.js) file.
+
+If you want to learn more, check out [Bundling node modules in k6](https://k6.io/docs/using-k6/modules#bundling-node-modules).
