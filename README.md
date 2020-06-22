@@ -38,7 +38,7 @@ We have configured this project as a GitHub template to simplify starting a new 
 
 **Install dependencies**
 
-Move to the project root folder and install the dependencies defined on [`package.json`](./package.json)
+Move to the project root folder and install the dependencies defined in [`package.json`](./package.json)
 
 ```bash
 $ yarn install
