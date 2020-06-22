@@ -4,11 +4,11 @@
 
 # Template to use TypeScript with k6
 
-![.github/workflows/push.yml](https://github.com/k6io/example-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=master)
+![.github/workflows/push.yml](https://github.com/k6io/template-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=master)
 
 </div>
 
-This repository provides a scaffolding project to start using Typescript with k6.
+This repository provides a scaffolding project to start using Typescript in your k6 scripts.
 
 ## Rationale
 
@@ -29,16 +29,16 @@ While it, of course, still is possible to shoot yourself in the foot with typesc
 
 ## Installation
 
-**Creating a repository from the `example-typescript` template**
+**Creating a project from the `template-typescript` template**
 
-We have configured this project as a GitHub template to simplify starting a new Typescript project. Navigate to the [example-typescript](https://github.com/k6io/example-typescript) page and click **Use this template**.
+To generate a Typescript project that includes the dependencies and initial configuration, navigate to the [template-typescript](https://github.com/k6io/template-typescript) page and click **Use this template**.
 
   ![](assets/use-this-template-button.png)
 
 
 **Install dependencies**
 
-Move to the project root folder and install the dependencies defined in [`package.json`](./package.json)
+Now, move to the project root folder and install the dependencies defined in [`package.json`](./package.json)
 
 ```bash
 $ yarn install
