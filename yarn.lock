@@ -824,9 +824,9 @@
   integrity sha512-8+KAKzEvSUdeo+kmqnKrqgeE+LcA0tjYWFY7RPProVYwnqDjukzO+3b6dLD56rYX5TdWejnEOLJYOIeh4CXKuA==
 
 "@types/k6@^0.26.0":
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/@types/k6/-/k6-0.26.0.tgz#41dc7d7e013d65d4b367f39c4eac7a959907fcf0"
-  integrity sha512-SI0/Y7NbMxkmcV0iwDBpwyYVKr+cDpf4K8Mw4DbOWLvA/SEE5B8ikuwhRVb3HQiE4tHxm8zhLpROitu+N8QZzw==
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/@types/k6/-/k6-0.26.1.tgz#f6fbef5be4eef92de49e64b702f5f4a225b8ec22"
+  integrity sha512-481A/jhFgYk0bL49kqMD/fEcnLUT6wJhtw8+lGBxB57OPNJMviIOfCylc0ng1jnXaiQad7BWXklB3Tg7epL6Mg==
 
 "@types/node@*":
   version "14.0.12"
