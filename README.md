@@ -8,13 +8,13 @@
 
 </div>
 
-This repository provides a scaffolding project to start using Typescript in your k6 scripts.
+This repository provides a scaffolding project to start using TypeScript in your k6 scripts.
 
 ## Rationale
 
-While JavaScript is great for a myriad of reasons, one area where it fall short is type safety and developer ergonomics. It's perfectly possible to write javascript code that will look OK and behave OK until a certain condition forces the executor into a faulty branch.
+While JavaScript is great for a myriad of reasons, one area where it fall short is type safety and developer ergonomics. It's perfectly possible to write JavaScript code that will look OK and behave OK until a certain condition forces the executor into a faulty branch.
 
-While it, of course, still is possible to shoot yourself in the foot with typescript as well, it's significantly harder. Without adding much overhead, Typescript will:
+While it, of course, still is possible to shoot yourself in the foot with TypeScript as well, it's significantly harder. Without adding much overhead, TypeScript will:
 
 - Improve the ability to safely refactor your code.
 - Improve readability and maintainablity.
@@ -31,14 +31,14 @@ While it, of course, still is possible to shoot yourself in the foot with typesc
 
 **Creating a project from the `template-typescript` template**
 
-To generate a Typescript project that includes the dependencies and initial configuration, navigate to the [template-typescript](https://github.com/k6io/template-typescript) page and click **Use this template**.
+To generate a TypeScript project that includes the dependencies and initial configuration, navigate to the [template-typescript](https://github.com/k6io/template-typescript) page and click **Use this template**.
 
   ![](assets/use-this-template-button.png)
 
 
 **Install dependencies**
 
-Now, move to the project root folder and install the dependencies defined in [`package.json`](./package.json)
+Clone the generated repository on your local machine, move to the project root folder and install the dependencies defined in [`package.json`](./package.json)
 
 ```bash
 $ yarn install
@@ -46,12 +46,13 @@ $ yarn install
 
 ## Running the test
 
-To run a test written in typescript, we first have to transpile the typescript code into javascript and bundle the project
+To run a test written in TypeScript, we first have to transpile the TypeScript code into JavaScript and bundle the project
 
 ```bash
 $ yarn webpack
 ```
 
+This command creates the final test files to the `./dist` folder.
 
 Once that is done, we can run our script the same way we usually do, for instance:
 
@@ -61,7 +62,7 @@ $ k6 run dist/test1.js
 
 ### Transpiling and Bundling
 
-By default, k6 can only run ES5.1 Javascript code. To use typescript, we have to set up a bundler that converts typescript to javascript code. 
+By default, k6 can only run ES5.1 JavaScript code. To use TypeScript, we have to set up a bundler that converts TypeScript to JavaScript code. 
 
 This project uses `Babel` and `Webpack` to bundle the different files - using the configuration of the [`webpack.config.js`](./webpack.config.js) file.
 
