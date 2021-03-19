@@ -11,7 +11,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-typescript": "^7.10.1",
-    "@types/k6": "^0.30.0",
+    "@types/k6": "^0.31.0",
     "@types/webpack": "^4.41.17",
     "babel-loader": "^8.1.0",
     "typescript": "^3.9.5",
