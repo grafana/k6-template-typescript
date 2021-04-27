@@ -1,11 +1,12 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   context: path.join(__dirname, 'src'),
   entry: {
-    test1: './test1.ts', 
-    test2: './test2.ts'
+    test1: './test1.ts',
+    test2: './test2.ts',
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -28,4 +29,7 @@ module.exports = {
   stats: {
     colors: true,
   },
-};
+  plugins: [
+    new CleanWebpackPlugin(),
+  ],
+}
