@@ -8,8 +8,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Cache node modules
-        uses: c-hive/gha-yarn-cache@v1
       - name: Install dependencies
         run: |
           yarn --frozen-lockfile
