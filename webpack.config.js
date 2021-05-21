@@ -1,5 +1,5 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -25,11 +25,9 @@ module.exports = {
     ],
   },
   target: 'web',
-  externals: /^k6(\/.*)?/,
+  externals: /k6(\/.*)?/,
   stats: {
     colors: true,
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-  ],
-}
+  plugins: [new CleanWebpackPlugin()],
+};
