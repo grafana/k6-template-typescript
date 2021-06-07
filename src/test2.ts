@@ -1,5 +1,7 @@
 import { sleep, check } from 'k6';
 import { Options } from 'k6/options';
+
+/* @ts-ignore */
 import { randomIntBetween } from 'https://jslib.k6.io/k6-utils/1.1.0/index.js';
 import http from 'k6/http';
 
