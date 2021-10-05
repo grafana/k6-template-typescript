@@ -957,10 +957,10 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.4.tgz#38fd73ddfd9b55abb1e1b2ed578cb55bd7b7d339"
   integrity sha512-8+KAKzEvSUdeo+kmqnKrqgeE+LcA0tjYWFY7RPProVYwnqDjukzO+3b6dLD56rYX5TdWejnEOLJYOIeh4CXKuA==
 
-"@types/k6@~0.32.0":
-  version "0.32.0"
-  resolved "https://registry.yarnpkg.com/@types/k6/-/k6-0.32.0.tgz#9539438dc49068c38a748ef1dfac873d30f9e9fe"
-  integrity sha512-6/PcFVvJe8stn56j/CulPpFTiPC2h7dvw9Mz1gnk2mGTSm4553nKzf52zHw7c/FMVp7f0TRkjyY/59vSImFYgg==
+"@types/k6@~0.34.0":
+  version "0.34.1"
+  resolved "https://registry.yarnpkg.com/@types/k6/-/k6-0.34.1.tgz#097bcc13d71e756025fbf85f55fb0fb1f73c8f83"
+  integrity sha512-bcxeok7rUxSRmzVWOeHqM/G2FxnHLis6RTPdvcjQdYxbiwky0oQRIbUiqsWHzreX4nr00+LF7R3AYE69MTfNvA==
 
 "@types/minimatch@*":
   version "3.0.4"
