@@ -1,6 +1,6 @@
 <div align="center">
   
-  ![banner](assets/ts-js-k6.png)
+  ![banner](docs/ts-js-k6.png)
 
 # Template to use TypeScript with k6
 
@@ -33,7 +33,7 @@ While it, of course, still is possible to shoot yourself in the foot with TypeSc
 
 To generate a TypeScript project that includes the dependencies and initial configuration, navigate to the [template-typescript](https://github.com/k6io/template-typescript) page and click **Use this template**.
 
-  ![](assets/use-this-template-button.png)
+  ![](docs/use-this-template-button.png)
 
 
 **Install dependencies**
