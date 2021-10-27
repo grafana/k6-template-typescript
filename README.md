@@ -60,6 +60,13 @@ Once that is done, we can run our script the same way we usually do, for instanc
 $ k6 run dist/test1.js
 ```
 
+## Writing own tests
+
+House rules for writing tests:
+- The test code is located in `src` folder
+- The entry points for the tests need to have "_test_" word in the name to distinguish them from auxillary files.
+- If static files are required then add them to `./assets` folder. Its content gets copied to the destination folder (`dist`) along with compiled scripts.
+
 ### Transpiling and Bundling
 
 By default, k6 can only run ES5.1 JavaScript code. To use TypeScript, we have to set up a bundler that converts TypeScript to JavaScript code. 
