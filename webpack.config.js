@@ -34,7 +34,10 @@ module.exports = {
     new CleanWebpackPlugin(),
     // Copy assets to the destination folder
     new CopyPlugin({
-      patterns: [{ from: path.resolve(__dirname, 'assets') }],
+      patterns: [{ 
+        from: path.resolve(__dirname, 'assets'), 
+        noErrorOnMissing: true 
+      }],
     }),
   ],
   optimization: {
