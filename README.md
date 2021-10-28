@@ -1,6 +1,6 @@
 <div align="center">
   
-  ![banner](assets/ts-js-k6.png)
+  ![banner](docs/ts-js-k6.png)
 
 # Template to use TypeScript with k6
 
@@ -17,7 +17,7 @@ While JavaScript is great for a myriad of reasons, one area where it fall short 
 While it, of course, still is possible to shoot yourself in the foot with TypeScript as well, it's significantly harder. Without adding much overhead, TypeScript will:
 
 - Improve the ability to safely refactor your code.
-- Improve readability and maintainablity.
+- Improve readability and maintainability.
 - Allow you to drop a lot of the defensive code previously needed to make sure consumers are calling functions properly.
 
 
@@ -33,7 +33,7 @@ While it, of course, still is possible to shoot yourself in the foot with TypeSc
 
 To generate a TypeScript project that includes the dependencies and initial configuration, navigate to the [template-typescript](https://github.com/k6io/template-typescript) page and click **Use this template**.
 
-  ![](assets/use-this-template-button.png)
+  ![](docs/use-this-template-button.png)
 
 
 **Install dependencies**
@@ -57,8 +57,15 @@ This command creates the final test files to the `./dist` folder.
 Once that is done, we can run our script the same way we usually do, for instance:
 
 ```bash
-$ k6 run dist/test1.js
+$ k6 run dist/get-200-status-test.js
 ```
+
+## Writing own tests
+
+House rules for writing tests:
+- The test code is located in `src` folder
+- The entry points for the tests need to have "_test_" word in the name to distinguish them from auxiliary files. You can change the entry [here](./webpack.config.js#L8). 
+- If static files are required then add them to `./assets` folder. Its content gets copied to the destination folder (`dist`) along with compiled scripts.
 
 ### Transpiling and Bundling
 
