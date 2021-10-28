@@ -1,4 +1,10 @@
-on: [push]
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
 
 jobs:
   k6_transpile_bundle_test:
@@ -19,4 +25,4 @@ jobs:
       - name: Run local k6 test
         uses: k6io/action@v0.2.0
         with:
-          filename: dist/test1.js
+          filename: dist/get-200-status-test.js
