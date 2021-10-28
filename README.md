@@ -17,7 +17,7 @@ While JavaScript is great for a myriad of reasons, one area where it fall short 
 While it, of course, still is possible to shoot yourself in the foot with TypeScript as well, it's significantly harder. Without adding much overhead, TypeScript will:
 
 - Improve the ability to safely refactor your code.
-- Improve readability and maintainablity.
+- Improve readability and maintainability.
 - Allow you to drop a lot of the defensive code previously needed to make sure consumers are calling functions properly.
 
 
@@ -57,7 +57,7 @@ This command creates the final test files to the `./dist` folder.
 Once that is done, we can run our script the same way we usually do, for instance:
 
 ```bash
-$ k6 run dist/test1.js
+$ k6 run dist/get-200-status-test.js
 ```
 
 ## Writing own tests
