@@ -915,10 +915,10 @@
   "resolved" "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.7.tgz"
   "version" "7.0.7"
 
-"@types/k6@~0.38.0":
-  "integrity" "sha512-2+8ctiOU/S3K+ztfrCpvC4OgC5TjAFRh6BtFV0hWJUlqNcHyQnKC6qkTTKYP20brYH7H3k6ziA4k3z5ZYkyTRQ=="
-  "resolved" "https://registry.npmjs.org/@types/k6/-/k6-0.38.0.tgz"
-  "version" "0.38.0"
+"@types/k6@~0.39.0":
+  "integrity" "sha512-H8x7Mk931UMxN7q5wioI9K9U6sLQ+XwMXyQdH2DJVjxpUTS92zP/rzZ4TF2xhjy4rO+PjTc8Mn848OuHK7VPvA=="
+  "resolved" "https://registry.npmjs.org/@types/k6/-/k6-0.39.0.tgz"
+  "version" "0.39.0"
 
 "@types/minimatch@*":
   "integrity" "sha512-1z8k4wzFnNjVK/tlxvrWuK5WMt6mydWWP7+zvH5eFep4oj+UkrfiJTRtjCeBXNpwaA/FYqqtb4/QS4ianFpIRA=="
