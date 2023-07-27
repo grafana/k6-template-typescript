@@ -12,16 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Install dependencies
-        run: |
-          yarn --frozen-lockfile
-
-      - name: Transpile and bundle test script
-        run: |
-          yarn webpack
-
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+            node-version: 16
+      - run: npm ci
+      - run: npm start
       - name: Run local k6 test
         uses: grafana/k6-action@v0.2.0
         with:

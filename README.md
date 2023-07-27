@@ -41,7 +41,7 @@ To generate a TypeScript project that includes the dependencies and initial conf
 Clone the generated repository on your local machine, move to the project root folder and install the dependencies defined in [`package.json`](./package.json)
 
 ```bash
-$ yarn install
+npm install
 ```
 
 ## Running the test
@@ -49,7 +49,7 @@ $ yarn install
 To run a test written in TypeScript, we first have to transpile the TypeScript code into JavaScript and bundle the project
 
 ```bash
-$ yarn webpack
+npm start
 ```
 
 This command creates the final test files to the `./dist` folder.
@@ -57,7 +57,7 @@ This command creates the final test files to the `./dist` folder.
 Once that is done, we can run our script the same way we usually do, for instance:
 
 ```bash
-$ k6 run dist/get-200-status-test.js
+k6 run dist/get-200-status-test.js
 ```
 
 ## Writing own tests
