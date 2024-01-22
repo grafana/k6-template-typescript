@@ -4,7 +4,7 @@
 
 # Template to use TypeScript with k6
 
-![.github/workflows/push.yml](https://github.com/grafana/k6-template-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=master)
+![.github/workflows/push.yml](https://github.com/grafana/k6-template-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=main)
 
 </div>
 
