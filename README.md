@@ -4,7 +4,7 @@
 
 # Template to use TypeScript with k6
 
-![.github/workflows/push.yml](https://github.com/k6io/template-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=master)
+![.github/workflows/push.yml](https://github.com/grafana/k6-template-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=master)
 
 </div>
 
@@ -21,17 +21,11 @@ While it, of course, still is possible to shoot yourself in the foot with TypeSc
 - Allow you to drop a lot of the defensive code previously needed to make sure consumers are calling functions properly.
 
 
-## Prerequisites
-
-- [k6](https://k6.io/docs/getting-started/installation)
-- [NodeJS](https://nodejs.org/en/download/)
-- [Yarn](https://yarnpkg.com/getting-started/install) (optional)
-
 ## Installation
 
 **Creating a project from the `template-typescript` template**
 
-To generate a TypeScript project that includes the dependencies and initial configuration, navigate to the [template-typescript](https://github.com/k6io/template-typescript) page and click **Use this template**.
+To generate a TypeScript project that includes the dependencies and initial configuration, navigate to the [template-typescript](https://github.com/grafana/k6-template-typescript) page and click **Use this template**.
 
   ![](docs/use-this-template-button.png)
 
@@ -46,10 +40,10 @@ npm install
 
 ## Running the test
 
-To run a test written in TypeScript, we first have to transpile the TypeScript code into JavaScript and bundle the project
+To run a test written in TypeScript, we first have to transpile the TypeScript code into JavaScript running the bundler:
 
 ```bash
-npm start
+npm run bundle
 ```
 
 This command creates the final test files to the `./dist` folder.
@@ -60,6 +54,18 @@ Once that is done, we can run our script the same way we usually do, for instanc
 k6 run dist/get-200-status-test.js
 ```
 
+## Transpiling and Bundling
+
+By default, k6 does not support TypeScript, but it supports ES modules and ES5.1 code with CommonJS modules. To use TypeScript, we have to set up a bundler that converts TypeScript to any of these formats. 
+
+This project uses `Babel` and `Webpack` to bundle the different files into CommonJS modules, using its [`webpack.config.js`](./webpack.config.js) configuration.
+
+The bundled tests will be transpiled to ES5.1 code with CommonJS modules, this allows running the tests with [`--compatibility-mode=base`](https://grafana.com/docs/k6/latest/using-k6/javascript-compatibility-mode/) for better performance:
+
+```bash
+k6 run --compatibility-mode=base dist/get-200-status-test.js
+```
+
 ## Writing own tests
 
 House rules for writing tests:
@@ -67,10 +73,9 @@ House rules for writing tests:
 - The entry points for the tests need to have "_test_" word in the name to distinguish them from auxiliary files. You can change the entry [here](./webpack.config.js#L8). 
 - If static files are required then add them to `./assets` folder. Its content gets copied to the destination folder (`dist`) along with compiled scripts.
 
-### Transpiling and Bundling
 
-By default, k6 can only run ES5.1 JavaScript code. To use TypeScript, we have to set up a bundler that converts TypeScript to JavaScript code. 
+**Learn more**
 
-This project uses `Babel` and `Webpack` to bundle the different files - using the configuration of the [`webpack.config.js`](./webpack.config.js) file.
-
-If you want to learn more, check out [Bundling node modules in k6](https://k6.io/docs/using-k6/modules#bundling-node-modules).
+- [k6 Docs: working with modules](https://grafana.com/docs/k6/latest/using-k6/modules/)
+- [JavaScript Compatibility Mode](https://grafana.com/docs/k6/latest/using-k6/javascript-compatibility-mode/)
+- [grafana/k6-rollup-example](https://github.com/grafana/k6-rollup-example)
