@@ -54,12 +54,7 @@ Once that is done, we can run our script the same way we usually do, for instanc
 k6 run dist/get-200-status-test.js
 ```
 
-## Transpiling and Bundling
-
-By default, k6 does not support TypeScript, but it supports ES modules and ES5.1 code with CommonJS modules. To use TypeScript, we have to set up a bundler that converts TypeScript to any of these formats. 
-
-
-**Learn more**
+**See also**
 
 - [Using k6 / Modules](https://grafana.com/docs/k6/latest/using-k6/modules/)
 - [Using k6 / JavaScript compatibility mode](https://grafana.com/docs/k6/latest/using-k6/javascript-compatibility-mode/)
