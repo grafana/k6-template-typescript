@@ -4,6 +4,8 @@
 
 # Template to use TypeScript with k6
 
+> Starting on Grafana k6 v0.52, k6 now includes an `experimental_enhanced` compatibility mode that includes partial TypeScript support. For more details, refer to [JavaScript and TypeScript compatibility mode](https://grafana.com/docs/k6/latest/using-k6/javascript-typescript-compatibility-mode/).
+
 ![.github/workflows/push.yml](https://github.com/grafana/k6-template-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=main)
 
 </div>
