@@ -13,8 +13,12 @@ jobs:
     strategy:
       matrix:
         node: [ 16, 18 ]
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
