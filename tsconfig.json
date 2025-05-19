@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es5",
     "moduleResolution": "node",
-    "module": "commonjs",
+    "target": "ES6",
+    "module": "CommonJS",
+    "outDir": "dist",
+    "rootDir": "src",
     "noEmit": true,
     "allowJs": true,
     "removeComments": false,
