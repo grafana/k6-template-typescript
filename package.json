@@ -4,7 +4,7 @@
   "repository": "ssh://git@github.com/k6io/example-typescript.git",
   "author": "Simon Aronsson <simme@k6.io>",
   "engines": {
-    "node": "16 || 18"
+    "node": "16 || 18 || 24"
   },
   "license": "MIT",
   "devDependencies": {
