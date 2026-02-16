@@ -8,6 +8,8 @@
 
 </div>
 
+> Starting on Grafana k6 v0.52, k6 now includes an `experimental_enhanced` compatibility mode that includes partial TypeScript support. For more details, refer to [JavaScript and TypeScript compatibility mode](https://grafana.com/docs/k6/latest/using-k6/javascript-typescript-compatibility-mode/).
+
 This repository provides a scaffolding project to start using TypeScript in your k6 scripts.
 
 ## Rationale
