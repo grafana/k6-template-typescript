@@ -8,6 +8,11 @@
 
 </div>
 
+> [!WARNING]
+> **This template is deprecated and this repository is archived.**
+>
+> k6 has native TypeScript support enabled by default since [v0.57.0](https://github.com/grafana/k6/releases/tag/v0.57.0) (released February 2025), so you can run `.ts` test files directly with no bundling step. See the [JavaScript and TypeScript compatibility mode documentation](https://grafana.com/docs/k6/latest/using-k6/javascript-typescript-compatibility-mode/) for the details. The `Babel`/`Webpack` setup described below is no longer necessary; the contents are kept for historical reference only.
+
 This repository provides a scaffolding project to start using TypeScript in your k6 scripts.
 
 ## Rationale
